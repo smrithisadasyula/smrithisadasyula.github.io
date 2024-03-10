@@ -530,7 +530,7 @@ body.section-switching.up .animation-block{
 }
 .about-text > p{
 	font-size:14px;
-	color:rgba(0,0,0,.4);
+	color:#333333;
 	line-height:1.8em;
 }
 .about-text{
@@ -557,7 +557,7 @@ body.section-switching.up .animation-block{
 	text-transform:uppercase;
 }
 .info-list > li > span{
-	color:rgba(0,0,0,.4);
+	color:#333333;
 }
 
 .skills-block .section-header{
