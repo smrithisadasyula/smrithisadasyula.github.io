@@ -18,13 +18,11 @@
 	
 	05. About Section
 	
-	06. Resume Section
+	06. Portfolio Section
 	
-	07. Portfolio Section
+	07. Contact Section
 	
-	08. Contact Section
-	
-	09. Responsive CSS
+	08. Responsive CSS
 
 =========================================================*/
 
@@ -529,7 +527,7 @@ body.section-switching.up .animation-block{
 	margin-bottom:80px;
 }
 .about-text > p{
-	font-size:14px;
+	font-size:19px;
 	color:#333333;
 	line-height:1.8em;
 }
@@ -545,6 +543,7 @@ body.section-switching.up .animation-block{
 	list-style:none;
 }
 .info-list > li{
+	font-size:17px;
 	padding:14px 0;
 	border-bottom:solid 1px rgba(0,0,0,.1);
 }
@@ -552,6 +551,7 @@ body.section-switching.up .animation-block{
 	border:none;
 }
 .info-list > li > strong{
+	font-size:17px;
 	letter-spacing:4px;
 	color:#202020;
 	text-transform:uppercase;
@@ -560,32 +560,6 @@ body.section-switching.up .animation-block{
 	color:#333333;
 }
 
-.skills-block .section-header{
-	margin-bottom:80px;
-}
-.skill{
-	position:relative;
-	margin-bottom:40px;
-}
-.skill:last-of-type{
-	margin-bottom:0;
-}
-.skill > h4{
-	margin-top:0;
-	margin-bottom:5px;
-	font-weight:500;
-	letter-spacing:2px;
-	text-transform:uppercase;
-	font-size:14px;
-}
-.skill > .bar{
-	background:#E0E0E0;
-}
-.skill > .bar > .percent{
-	background:#57701c;
-	width:10%;
-	height:6px;
-}
 .menu-btn{
 	font-size:0;
 	display:block;
