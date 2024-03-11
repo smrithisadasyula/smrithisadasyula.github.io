@@ -1679,18 +1679,5 @@
 
 			})
 		</script>
-		
-		<!--hCaptcha client side validation-->
-		<script>
-			const form = document.getElementById('bookingForm');
-			form.addEventListener('submit', function(e) {
-				const hCaptcha = form.querySelector('.h-captcha > textarea').value;
-				if (!hCaptcha) {
-					e.preventDefault();
-					alert("Please complete the captcha field.");
-					return;
-				}
-			});
-		</script>
 	</body>
 </html>
