@@ -58,6 +58,32 @@ $(function(){
 			  }
 
 			}
+		  },
+		  open: function() {
+			var popup = this; // Reference the current popup object
+			var iframeContainer = $('#iframe-container'); // Select iframe container
+		
+			// Check if the current popup has an iframe container
+			if (iframeContainer.length) {
+			  var iframeUrl;
+		
+			  // Retrieve iframe URL from data attribute
+			  iframeUrl = $(popup.st.el).attr('data-iframe-url');
+		
+			  // Create and configure the iframe element (unchanged)
+			  var iframe = $('<iframe>')
+				.attr('src', iframeUrl)
+				.attr('frameborder', 0)
+				.attr('allowfullscreen', true);
+		
+			  // Append the iframe to the container and show it (unchanged)
+			  iframeContainer.html(iframe);
+			  iframe.show();
+			}
+		  },
+		  close: function() {
+			// Remove the iframe from the container when the popup closes
+			$('#iframe-container').html('');
 		  }
 		}
 	  });
