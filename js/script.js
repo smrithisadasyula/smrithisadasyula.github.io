@@ -24,8 +24,43 @@ $(function(){
 		preloader: false,
 		midClick: true,
 		removalDelay: 300,
-		mainClass: 'my-mfp-zoom-in'
-	});
+		mainClass: 'my-mfp-zoom-in',
+		gallery: {
+		  enabled: true // Enable gallery functionality
+		},
+		// Add callbacks for previous and next buttons
+		callbacks: {
+		  update: function() {
+			var index = this.index;
+			var prevButton = $('.mfp-arrow mfp-arrow-left');
+			var nextButton = $('.mfp-arrow mfp-arrow-right');
+	  
+			// Disable buttons if there's only one element
+			if (this.items.length === 1) {
+			  prevButton.hide();
+			  nextButton.hide();
+			} else {
+			  prevButton.show();
+			  nextButton.show();
+			  
+			  // Disable previous button for the first element
+			  if (index === 0) {
+				prevButton.addClass('mfp-disabled');
+			  } else {
+				prevButton.removeClass('mfp-disabled');
+			  }
+			  
+			  // Disable next button for the last element
+			  if (index === this.items.length - 1) {
+				nextButton.addClass('mfp-disabled');
+			  } else {
+				nextButton.removeClass('mfp-disabled');
+			  }
+
+			}
+		  }
+		}
+	  });
 	
 	$(window).on('load', function(){
 		$('body').addClass('loaded');
